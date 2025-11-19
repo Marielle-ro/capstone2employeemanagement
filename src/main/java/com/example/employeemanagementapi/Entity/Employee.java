@@ -18,24 +18,24 @@ public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Schema(description = "Unique employee ID", example = "1")
+    @Schema
     private Long id;
 
     @NotBlank(message = "Name is required")
-    @Schema(description = "Full employee name", example = "Marie Pascale")
+    @Schema(description = "employee name")
     private String name;
 
     @NotBlank(message = "Position is required")
-    @Schema(description = "Job title", example = "Software Engineer")
+    @Schema(description = "Job title")
     private String position;
 
     @NotBlank(message = "Department is required")
-    @Schema(description = "Department name", example = "IT")
+    @Schema(description = "Department name")
     private String department;
 
     @NotNull(message = "Hire date is required")
     @PastOrPresent(message = "curent date")
-    @Schema(description = "Date when employee was hired", example = "2024-05-10")
+    @Schema(description = "Date when employee was hired")
     private LocalDate hireDate;
 
     @ManyToOne(fetch = FetchType.LAZY)
