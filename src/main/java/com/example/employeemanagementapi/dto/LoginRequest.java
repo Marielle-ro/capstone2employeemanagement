@@ -11,7 +11,7 @@ public class LoginRequest {
 
     @NotBlank(message = "Email is required")
     @Email(message = "Email should be valid")
-    @Schema(example = "jane.doe@gmail.com")
+    @Schema(example = "sara.doe@gmail.com")
     private String email;
 
     @NotBlank(message = "Password is required")
